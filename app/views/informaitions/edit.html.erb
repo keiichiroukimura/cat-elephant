@@ -1,4 +1,53 @@
 <h1>編集</h1>
-<%= render 'form', 　informaition: @informaition %>
+<%= form_for @informaition do |f| %>
+  <div class="informaitions">  
+    <div class="informaition_title">
+      <%= f.label :物件名 %>
+      <br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="informaition_rent">
+      <%= f.label :賃料 %>
+      <br>
+      <%= f.text_field :rent %>円
+    </div>
+    <div class="informaition_address">
+      <%= f.label :住所 %>
+      <br>
+      <%= f.text_field :address %>
+    </div>
+    <div class="informaition_age">
+      <%= f.label :築年数 %>
+      <br>
+      <%= f.text_field :age %>年
+    </div>
+    <div class="informaition_remark">
+      <%= f.label :備考 %>
+      <br>
+      <%= f.text_area :remark %>
+    </div>
+  </div>
+
+  <%= f.fields_for :stations do |i| %>
+    <h2>最寄駅<%= i.index + 1 %></h2>
+    <div class="informaition_title">
+      <%= i.label :route_name, :路線名 %>
+      <br>
+      <%= i.text_field :route_name %>線
+    </div>
+    <div class="informaition_rent">
+      <%= i.label :station_name, :駅名 %>
+      <br>
+      <%= i.text_field :station_name %>駅
+    </div>
+    <div class="informaition_address">
+      <%= i.label :徒歩分数 %>
+      <br>
+      <%= i.text_field :time %>分
+    </div>
+    <% end %>
+  <%= f.submit :登録 %>
+<% end %>
+
 <%= link_to 'show', @informaition %> |
 <%= link_to 'Back', informaitions_path %>

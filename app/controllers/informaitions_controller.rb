@@ -6,7 +6,7 @@ class InformaitionsController < ApplicationController
 
   def new
     @informaition = Informaition.new
-    2.times { @informaition.stations.build}
+    2.times{ @informaition.stations.build}
   end
 
   def show
@@ -21,10 +21,12 @@ class InformaitionsController < ApplicationController
       render 'new'
     end
   end
-def edit;end
+  
+  def edit
+  1.times{ @informaition.stations.build}
+  end
 
   def update
-  
     if @informaition.update(informaition_params)
       redirect_to informaitions_path
     else
@@ -40,7 +42,7 @@ def edit;end
   private
 
   def informaition_params
-    params.require(:informaition).permit(:name, :rent, :address, :age, :remark, stations_attributes: [ :route_name, :station_name, :time])
+    params.require(:informaition).permit(:name, :rent, :address, :age, :remark, stations_attributes: [ :id, :route_name, :station_name, :time])
   end
 
   def set_informaition

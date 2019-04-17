@@ -1,3 +1,17 @@
+<%= form_for @informaition do |form| %>
+  <% if @informaition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @informaition.errors.count %>件のエラーがあります。</h2>
+      <ul>
+
+      <% @informaition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
+
 <%= form_for @informaition do |f| %>
   <div class="informaitions">  
     <div class="informaition_title">
