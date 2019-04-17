@@ -1,2 +1,0 @@
-class SecondStationsController < ApplicationController
-end

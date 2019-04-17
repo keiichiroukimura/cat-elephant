@@ -1,0 +1,15 @@
+<h1>閲覧</h1>
+  <p>物件名:<%= @informaition.name %></p>
+  <p>賃料:<%= @informaition.rent %></p>
+  <p>住所:<%= @informaition.address %></p>
+  <p>築年数:<%= @informaition.age %></p>
+  <p>備考:<%= @informaition.remark %></p>
+  
+  <% @informaition.stations.each do |informaition| %>
+    <h2>最寄駅</h2>
+    <p>路線名<%= informaition.route_name %></p>
+    <p>駅名<%= informaition.station_name %></p>
+    <p>徒歩分数<%= informaition.time %></p>
+    <% end %>
+    <%= link_to '編集', edit_informaition_path(@informaition) %>
+    <%= link_to 'Back', informaitions_path %>

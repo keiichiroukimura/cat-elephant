@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SecondStationsControllerTest < ActionDispatch::IntegrationTest
+class StationTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
