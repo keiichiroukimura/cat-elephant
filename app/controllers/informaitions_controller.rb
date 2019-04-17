@@ -24,8 +24,8 @@ class InformaitionsController < ApplicationController
 def edit;end
 
   def update
-    @informaition = Informaition.new(informaition_params)
-    if @informaition.update
+  
+    if @informaition.update(informaition_params)
       redirect_to informaitions_path
     else
       render 'new'
