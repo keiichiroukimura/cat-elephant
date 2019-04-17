@@ -8,7 +8,7 @@
     <div class="informaition_rent">
       <%= f.label :賃料 %>
       <br>
-      <%= f.text_field :rent %>
+      <%= f.text_field :rent %>円
     </div>
     <div class="informaition_address">
       <%= f.label :住所 %>
@@ -18,7 +18,7 @@
     <div class="informaition_age">
       <%= f.label :築年数 %>
       <br>
-      <%= f.text_field :age %>
+      <%= f.text_field :age %>年
     </div>
     <div class="informaition_remark">
       <%= f.label :備考 %>
@@ -32,17 +32,17 @@
     <div class="informaition_title">
       <%= i.label :route_name, :路線名 %>
       <br>
-      <%= i.text_field :route_name %>
+      <%= i.text_field :route_name %>線
     </div>
     <div class="informaition_rent">
       <%= i.label :station_name, :駅名 %>
       <br>
-      <%= i.text_field :station_name %>
+      <%= i.text_field :station_name %>駅
     </div>
     <div class="informaition_address">
       <%= i.label :徒歩分数 %>
       <br>
-      <%= i.text_field :time %>
+      <%= i.text_field :time %>分
     </div>
     <% end %>
   <%= f.submit :登録 %>

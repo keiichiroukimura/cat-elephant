@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190415021551) do
+ActiveRecord::Schema.define(version: 20190417041251) do
 
   create_table "informaitions", force: :cascade do |t|
     t.string   "name"
     t.integer  "rent"
     t.text     "address"
-    t.string   "age"
+    t.integer  "age"
     t.text     "remark"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20190415021551) do
   create_table "stations", force: :cascade do |t|
     t.string   "route_name"
     t.string   "station_name"
-    t.string   "time"
+    t.integer  "time"
     t.integer  "informaition_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
