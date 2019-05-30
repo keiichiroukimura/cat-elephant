@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 gem 'dotenv-rails' # 開発環境で環境変数を操作するのに必要
 gem 'unicorn' # アプリケーションサーバのunicorn
 gem 'mini_racer', platforms: :ruby # デプロイ時に必要
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'ed25519'
+gem 'bcrypt_pbkdf'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
