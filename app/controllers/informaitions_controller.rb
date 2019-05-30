@@ -10,7 +10,6 @@ class InformaitionsController < ApplicationController
   end
 
   def show
-    
   end
   
   def create
@@ -23,7 +22,7 @@ class InformaitionsController < ApplicationController
   end
   
   def edit
-  1.times{ @informaition.stations.build}
+    1.times{ @informaition.stations.build}
   end
 
   def update
